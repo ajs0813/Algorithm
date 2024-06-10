@@ -35,7 +35,8 @@ public class Main {
     private static int bfs(List<List<Integer>> graph, int start, int end, int n){
         Queue<Integer> queue = new LinkedList<>();
         boolean[] visited = new boolean[n+1];
-        int[] distance = new int[n+1];
+        int[] distance = new int[n+1]; // distance 배열의 각 인덱스 위치는 해당 정점까지의 최단 거리를 의미합니다. 즉, distance[i]는 시작 정점에서 정점 i까지의 최단 거리를 나타냅니다.
+        // distance = [0, 2, 1, 3, 0, 0, 0, 0, 2, 2] 인덱스 0은 사용하지 않음
 
         queue.offer(start);
         visited[start] = true;
