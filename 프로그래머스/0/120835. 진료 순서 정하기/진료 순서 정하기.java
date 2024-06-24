@@ -2,10 +2,7 @@ import java.util.Arrays;
 class Solution {
     public int[] solution(int[] emergency) {
         int[] answer = new int[emergency.length];
-        int[] emergencyClone = new int[emergency.length];
-        for (int i = 0; i < emergency.length; i++) {
-            emergencyClone[i] = emergency[i];
-        }
+        int[] emergencyClone = emergency.clone();
         Arrays.sort(emergencyClone);
         int[] reverse = new int[emergencyClone.length];
 
