@@ -1,9 +1,7 @@
 import java.util.*;
 class Solution {
     public int solution(int a, int d, boolean[] included) {
-        if(included.length == 1){
-            return a;
-        }
+        
         int answer = 0;
         int[] arr = new int[included.length];
         arr[0] = a;
