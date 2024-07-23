@@ -33,6 +33,7 @@ class Solution {
             }
         }
 
+        // 만약 실패율이 같다면 다음 인덱스에 오는 실패율에 존나 작은 값을 빼준다면 내림차순 할 때 알아서 요구사항대로 정렬되지 않을까?
         double min = 0.000001;
         for(int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
@@ -46,14 +47,10 @@ class Solution {
         Arrays.sort(failCopy);
         double[] reverseFail = new double[N];
 
+        // 요구사항이 원하는대로 실패율대로 내림차순
         for (int i = 0; i < N; i++) {
             reverseFail[i] = failCopy[N - i - 1];
         }
-
-
-
-
-
 
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
@@ -63,8 +60,7 @@ class Solution {
 
             }
         }
-
-
+        
         return answer;
     }
 }
