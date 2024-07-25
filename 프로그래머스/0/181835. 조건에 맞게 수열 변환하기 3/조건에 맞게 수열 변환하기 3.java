@@ -1,0 +1,17 @@
+class Solution {
+    public int[] solution(int[] arr, int k) {
+        int[] answer = {};
+        
+        for(int i = 0; i<arr.length; i++){
+            if(k%2==1){
+                arr[i] = arr[i]*k;
+            } else {
+                arr[i] = arr[i] + k;
+            }
+        }
+        
+        answer = arr.clone();
+        
+        return answer;
+    }
+}
