@@ -1,24 +1,29 @@
+import java.util.*;
 class Solution {
     public int[] solution(int[] numlist, int n) {
-        // 배열을 복사해서 사용
-        int[] answer = numlist.clone();
+        Integer[] numArray = new Integer[numlist.length];
+        for (int i = 0; i < numArray.length; i++) {
+            numArray[i] = numlist[i];
+        }
 
-        // 버블 정렬을 사용하여 정렬
-        for(int i = 0; i<answer.length-1; i++){
-            for(int j = 0; j<answer.length -1 -i; j++){
-                int diff1 = Math.abs(answer[j] - n);
-                int diff2 = Math.abs(answer[j+1] -n);
-
-                // 거리가 같다면 더 큰 수가 앞에 오도록
-                if(diff1>diff2 || (diff1 == diff2 && answer[j] < answer[j+1])){
-                    int temp = answer[j];
-                    answer[j] = answer[j+1];
-                    answer[j+1] = temp;
+        Arrays.sort(numArray, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer a, Integer b) {
+                int diff1 = Math.abs(a - n);
+                int diff2 = Math.abs(b - n);
+                if (diff1 == diff2) {
+                    return b - a; // 차이가 같다면 더 큰 수가 앞에 오도록 정렬
                 }
+                return diff1 - diff2; // 차이에 따라 정렬
             }
+        });
+
+        int[] result = new int[numArray.length];
+        for (int i = 0; i < numArray.length; i++) {
+            result[i] = numArray[i];
         }
 
 
-        return answer;
+        return result;
     }
 }
