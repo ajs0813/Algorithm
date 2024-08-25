@@ -15,24 +15,26 @@ class Solution {
         int[] same = new int[10];
 
         for (int i = 0; i < same.length; i++) {
-            if(Xarr[i] != 0 && Yarr[i] != 0){
+            if (Xarr[i] != 0 && Yarr[i] != 0) {
                 same[i] = Math.min(Xarr[i], Yarr[i]);
             }
         }
 
         StringBuilder sb = new StringBuilder(answer);
 
-        for (int i = same.length-1; i >= 0; i--) {
-           sb.append(Integer.toString(i).repeat(same[i]));
+        for (int i = same.length - 1; i >= 0; i--) {
+            for (int j = same[i]; j > 0; j--) {
+                sb.append(i);
+            }
         }
 
         answer = sb.toString();
 
-        if(answer.isBlank()){
+        if (answer.isBlank()) {
             answer = "-1";
         }
 
-        if(answer.startsWith("0")){
+        if (answer.startsWith("0")) {
             answer = "0";
         }
 
