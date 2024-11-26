@@ -1,10 +1,10 @@
 # [level 0] 두 수의 차 - 120803 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120803?language=scala) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120803?language=swift) 
 
 ### 성능 요약
 
-메모리: 90.5 MB, 시간: 0.38 ms
+메모리: 16.3 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 11월 25일 18:43:37
+2024년 11월 26일 17:37:18
 
 ### 문제 설명
 
